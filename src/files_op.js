@@ -1,5 +1,5 @@
 export const writeFile = (op) => {
-  Deno.writeTextFileSync("../input.txt", op);
+  Deno.writeTextFileSync("./input.txt", op);
 };
 
 export const clearInputFile = () => Deno.writeTextFileSync("./input.txt", "");

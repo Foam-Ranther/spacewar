@@ -64,7 +64,7 @@ export const keepBlockWithinWidth = (block, start, end) => {
   }
 };
 
-const move = (plane, move) => {
+const moveBullets = (plane, move) => {
   for (const ele of plane) {
     const moveFn = moveFns[move];
     moveFn(ele);
@@ -81,12 +81,9 @@ const movePlane = (plane, move, { height, width }) => {
 };
 
 const updateBullets = (plane, bullets) => {
-  move(bullets, "w");
-
   const newHead = { ...plane[0] };
-  const moveUpward = moveFns["w"];
-  moveUpward(newHead);
   bullets.push(newHead);
+  moveBullets(bullets, "w");
 };
 
 const filterBullets = (bullets) => {
