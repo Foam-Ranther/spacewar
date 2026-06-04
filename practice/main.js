@@ -1,12 +1,7 @@
-import { createScreen, drawOnScreen, updateScreen } from "./src/grid.js";
-import { Spaceship } from "./spaceship_class.js";
-import { enemyShip1, playerCoor } from "./spaceships_positions.js";
-const screenConfig = createScreen({ height: 30, width: 40 }, "  ");
+import { Spaceship } from "./moving_block.js";
+import { createScreen, drawOnScreen, updateScreen } from "./grid.js";
 
-const INTERVAL_TIME = 200;
-const SPACESHIP_PIXEL = "✈️";
-const BULLET_PIXEL = "💣";
-const BG_PIXEL = "  ";
+const screenConfig = createScreen({ height: 30, width: 40 }, "  ");
 
 const moveFns = {
   "a": (block, speed) => block.x = block.x - speed,

@@ -1,4 +1,4 @@
-import { writeFile } from "./src/files_op.js";
+import { writeFile } from "./src/input.js";
 
 const isMoveValid = (move) => ["a", "d", "h"].includes(move);
 
